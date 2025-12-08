@@ -1,0 +1,23 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "A modern real-time chat application built with the **MERN stack** and **Socket.IO**, featuring secure authentication, live messaging, online presence, typing indicators, and a clean UI.  \r Designed as a full-stack portfolio project to demonstrate scalable architecture and production-ready practices.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabilHR/chat-app-mern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabilHR/chat-app-mern/issues"
+  },
+  "homepage": "https://github.com/nabilHR/chat-app-mern#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
+  }
+}
