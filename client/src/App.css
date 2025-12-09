@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+
+.app {
+  display: flex;
+  color: black;
+  background-color: cyan;
+}
+
+.login {
+  display: flex;
+  align-self: center;
+  color: black;
+  background-color: cyan;
+}
