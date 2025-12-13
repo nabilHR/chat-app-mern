@@ -1,5 +1,6 @@
 {
   "name": "chat-app",
+  "type": "module",
   "version": "1.0.0",
   "description": "A modern real-time chat application built with the **MERN stack** and **Socket.IO**, featuring secure authentication, live messaging, online presence, typing indicators, and a clean UI.  \r Designed as a full-stack portfolio project to demonstrate scalable architecture and production-ready practices.",
   "main": "index.js",
@@ -24,6 +25,7 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
     "helmet": "^8.1.0",
+    "joi": "^18.0.2",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.0.1"
   }

@@ -1,12 +1,16 @@
 import jwt from "jsonwebtoken";
 import config from "../config/index.js";
 
-export function signAccessToken(payload) {
-  return jwt.sign(payload, config.jwtSecret, {
+export function signAccessToken(userId) {
+  return jwt.sign({ sub: userId }, config.jwtSecret, {
     expiresIn: config.jwtExpiresIn,
   });
 }
 
-export function verifyAccessToken(token) {
-  return jwt.verify(token, config.jwtSecret);
+export function signRefreshToken(userId) {
+  return jwt.sign(
+    { sub: userId },
+    config.jwtSecret, // later you can use a different secret
+    { expiresIn: config.refreshTokenExpiresIn }
+  );
 }
