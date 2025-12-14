@@ -59,3 +59,9 @@ export async function logout(req, res, next) {
     next(err);
   }
 }
+
+export async function me(req, res) {
+  return res.status(200).json({
+    user: req.user,
+  });
+}

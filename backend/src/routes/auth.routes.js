@@ -8,6 +8,8 @@ import { loginSchema } from "../validators/auth.validator.js";
 import { refresh } from "../controllers/auth.controller.js";
 import { logout } from "../controllers/auth.controller.js";
 
+import { protect } from "../middlewares/auth.middleware.js";
+import { me } from "../controllers/auth.controller.js";
 
 const router = Router();
 
@@ -15,6 +17,9 @@ router.post("/login", validate(loginSchema), login);
 router.post("/register", validate(registerSchema), register);
 router.post("/refresh", refresh);
 router.post("/logout", logout);
+// src/routes/auth.routes.js
+
+router.get("/me", protect, me);
 
 export default router;
 
