@@ -5,6 +5,8 @@ import cors from "cors";
 import rateLimit from "express-rate-limit";
 import User from "./models/user.model.js";
 import authRoutes from "./routes/auth.routes.js";
+import usersRoutes from "./routes/users.routes.js";
+import { protect } from "./middlewares/auth.middleware.js";
 
 const app = express();
 
@@ -32,6 +34,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use("/api/auth", authRoutes);
+app.use("/api/users", usersRoutes);
 
 app.use((err, req, res, next) => {
   const status = err.statusCode || 500;
@@ -43,7 +46,6 @@ app.use((err, req, res, next) => {
 
 app.get("/", (req, res) => res.json({ status: "ok" }));
 
-import { protect } from "./middlewares/auth.middleware.js";
 
 app.get("/protected", protect, (req, res) => {
   res.json({
